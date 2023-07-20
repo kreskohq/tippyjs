@@ -47,8 +47,7 @@
     "test": "yarn test:types && yarn test:dom && yarn test:functional",
     "lint": "eslint . --ext .ts,.js",
     "format": "prettier --write \"**/*.{js,ts,json,md,mdx,scss,css}\" --ignore-path .config/.prettierignore",
-    "clean": "rimraf dist/ themes/ animations/ coverage/ .devserver/ .cache/ ./index.d.ts",
-    "prepare": "echo prepared"
+    "clean": "rimraf dist/ themes/ animations/ coverage/ .devserver/ .cache/ ./index.d.ts"
   },
   "babel": {
     "extends": "./.config/babel.config"
