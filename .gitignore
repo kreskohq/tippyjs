@@ -2,7 +2,7 @@
 coverage/
 .devserver/
 node_modules/
-dist/
 /themes
 /animations
 index.d.ts
+yarn-error.log

@@ -133,7 +133,9 @@ export default function createTippy(
   reference._tippy = instance;
   popper._tippy = instance;
 
-  const pluginsHooks = plugins.map((plugin) => plugin.fn(instance));
+  const pluginsHooks = plugins
+    .filter((p) => p.fn)
+    .map((plugin) => plugin.fn(instance));
   const hasAriaExpanded = reference.hasAttribute('aria-expanded');
 
   addListeners();
@@ -610,7 +612,7 @@ export default function createTippy(
       enabled: true,
       phase: 'beforeWrite',
       requires: ['computeStyles'],
-      fn({state}) {
+      fn({state}: any) {
         if (getIsDefaultRenderFn()) {
           const {box} = getDefaultTemplateChildren();
 
